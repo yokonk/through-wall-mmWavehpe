@@ -132,6 +132,14 @@
       line-height: 1.7;
       text-align: center;
     }
+    .figure-note {
+      max-width: 820px;
+      margin: 0.75rem auto 0;
+      color: #475569;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      text-align: left;
+    }
     .figure-block + .figure-block { margin-top: 3.5rem; }
 
     /* ---------- Stat cards (Dataset) ---------- */
@@ -349,6 +357,12 @@
           </a>
         </figure>
         <p class="figure-caption">Comparison with prior RF-based human motion datasets.</p>
+        <p class="figure-note">
+          Our dataset provides cleaned mmWave point clouds with MoCap-based 3D annotations under diverse occlusions.
+          #Act. denotes the number of representative motion types.
+          <sup>*</sup> denotes marker-based MoCap annotations.
+          <sup>&dagger;</sup> denotes non-public data.
+        </p>
 
         <div class="stat-grid">
           <div class="stat-card">
@@ -435,6 +449,10 @@
       </figure>
       <p class="figure-caption">
         We qualitatively evaluated reconstruction accuracy for various poses with baselines. From top to bottom, the rows correspond to the fabric, plastic, gypsum, plywood, and non-occlusion scenes, respectively. The evaluated actions demonstrated in each row from top to bottom are walking in place, twisting, squatting, waving, and T-pose. The blue arrows indicate incorrect movements.
+      </p>
+      <p class="figure-note">
+        While the baseline methods reconstruct the torso region relatively well, they struggle to estimate joint angles and maintain pose accuracy for the extremities.
+        This improvement in hand and foot joint localization suggests that the sensitivity correction from the radar center toward the peripheral region enhanced the sampling quality of the extremities.
       </p>
     </div>
   </section>
